@@ -6,3 +6,60 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+```{r}
+library(readr)
+library(tidyverse)
+library(tidymodels)
+library(ggplot2)
+
+
+
+```
+
+
+
+```{r}
+
+sales <- inventory %>%
+  group_by(item_no) %>%
+  summarise(n = sum(sold))
+  
+
+```
+
+```{r}
+
+
+weeks <- inventory %>%
+  group_by(week) %>%
+  summarise(n = sum(sold))
+
+
+
+```
+
+```{r}
+
+for (item_no in inventory) {
+  inventory %>%
+  filter(item_no == item_no) %>%
+  group_by(week)
+    
+
+  
+}
+
+```
+
+```{r}
+
+inventory %>%
+  filter(item_no == "020-307") %>%
+  group_by(week)
+  
+  
+
+```
+
