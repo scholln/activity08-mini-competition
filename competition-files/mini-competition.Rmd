@@ -63,3 +63,10 @@ inventory %>%
 
 ```
 
+```{r}
+
+
+glm(formula = week ~ sold + item_no, family = poisson(), data = inventory)
+
+```
+
